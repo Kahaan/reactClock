@@ -9627,11 +9627,11 @@ var Calculator = function (_React$Component) {
   function Calculator(props) {
     _classCallCheck(this, Calculator);
 
-    return _possibleConstructorReturn(this, (Calculator.__proto__ || Object.getPrototypeOf(Calculator)).call(this, props));
-    //your code here
-  }
+    var _this = _possibleConstructorReturn(this, (Calculator.__proto__ || Object.getPrototypeOf(Calculator)).call(this, props));
 
-  //your code here
+    _this.state = { count: [1, 2, 3, 4] };
+    return _this;
+  }
 
   _createClass(Calculator, [{
     key: 'render',
@@ -9642,9 +9642,19 @@ var Calculator = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           null,
-          'Hello World'
+          'Calculator'
         ),
-        '//your code will replace this'
+        _react2.default.createElement(
+          'ul',
+          null,
+          this.state.count.map(function (count) {
+            return _react2.default.createElement(
+              'li',
+              null,
+              count
+            );
+          })
+        )
       );
     }
   }]);
