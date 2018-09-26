@@ -13,10 +13,10 @@ class Calculator extends React.Component {
     this.setState({ num1 })
   }
 
-  setNum2(e){
-    const num2 === e.target.value ? parseInt(e.target.value) : ""
-    this.setState({ num2 })
-  }
+  // setNum2(e){
+  //   const num2 === e.target.value ? parseInt(e.target.value) : ""
+  //   this.setState({ num2 })
+  // }
 
 
   render(){
