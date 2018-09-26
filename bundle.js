@@ -9629,31 +9629,26 @@ var Calculator = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Calculator.__proto__ || Object.getPrototypeOf(Calculator)).call(this, props));
 
-    _this.state = { count: [1, 2, 3, 4] };
+    _this.state = { num1: "", num2: "", result: 0 };
+    _this.setNum1 = _this.setNum1.bind(_this);
     return _this;
   }
 
   _createClass(Calculator, [{
-    key: 'render',
+    key: "setNum1",
+    value: function setNum1(e) {}
+  }, {
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        "div",
         null,
+        _react2.default.createElement("input", { value: this.state.num1 }),
+        _react2.default.createElement("input", { value: this.state.num2 }),
         _react2.default.createElement(
-          'h1',
+          "h1",
           null,
-          'Calculator'
-        ),
-        _react2.default.createElement(
-          'ul',
-          null,
-          this.state.count.map(function (count) {
-            return _react2.default.createElement(
-              'li',
-              null,
-              count
-            );
-          })
+          this.state.result
         )
       );
     }
